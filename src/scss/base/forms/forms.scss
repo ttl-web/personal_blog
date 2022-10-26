@@ -1,0 +1,61 @@
+//<FORM>
+// Снипет (HTML):
+.form {
+  width: 100%;
+  background-color: $primary;
+  max-width: rem(210);
+  &__row {
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__input {
+    display: block;
+    padding: rem(14) rem(0) rem(12) rem(20);
+    width: 100%;
+    background: transparent;
+    font-size: rem(12);
+    color: $white;
+    &::placeholder {
+      color: rgba($white, 0.4);
+    }
+  }
+  &__button {
+  }
+  &__error {
+  }
+}
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";

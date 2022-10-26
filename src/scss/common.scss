@@ -1,0 +1,62 @@
+// Заголовки, общие БЄМ блоки и проче...
+// MAIN
+.page {
+  padding-left: $sidebar-width;
+  padding-top: rem(100);
+  padding: rem(100) 0 rem(80);
+  &__container {
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
+}
+
+// SIDEBAR
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  background-color: $primary;
+  box-shadow: 5px 0 15px rgba(#050505, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sidebar;
+}
+
+// SOCIAL
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+// STORIES
+.stories {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-rows: 195px;
+  grid-template-columns: repeat(auto-fill, 140px);
+
+  margin-bottom: rem(30);
+}
+// ADD A POST
+.add-post {
+  margin-bottom: rem(30);
+  box-shadow: 0 15px 25px rgba($black, 0.45);
+  background-color: $secondary;
+  border-radius: 5px;
+  padding: rem(15) rem(20);
+}
+// POST
+.post {
+  box-shadow: 0 15px 25px rgba($black, 0.35);
+  background-color: $primary;
+  margin-bottom: rem(30);
+  padding: rem(25);
+  border-radius: 5px;
+}
+
+// PAGINATION
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(80);
+}

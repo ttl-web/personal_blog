@@ -1,0 +1,46 @@
+.add-post {
+  &__form {
+    display: flex;
+    align-items: flex-end;
+    &-actions {
+      display: flex;
+      justify-content: space-between;
+      width: 17%;
+    }
+  }
+  &__textarea {
+    display: block;
+    width: 83%;
+    font-size: rem(15);
+    color: $white;
+    background: transparent;
+    resize: none;
+    &::placeholder {
+      color: #d2d2d2;
+    }
+  }
+  &__file,
+  &__send {
+    display: block;
+    width: rem(44);
+    height: rem(44);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+    input {
+      display: none;
+    }
+  }
+  &__file {
+    background: #ebebeb url("../img/add-photo.svg") center no-repeat;
+    &:hover {
+      background-color: darken(#ebebeb, 15%);
+    }
+  }
+  &__send {
+    background-color: $btn-blue;
+    &:hover {
+      background-color: darken($btn-blue, 10%);
+    }
+  }
+}

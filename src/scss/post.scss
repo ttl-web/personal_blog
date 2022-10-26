@@ -1,0 +1,154 @@
+.post {
+  &__header {
+    margin: 0 0 rem(25);
+
+    img {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+    &--preview {
+      margin: rem(-25) rem(-25) rem(25);
+    }
+  }
+  &__preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__title {
+    font-size: rem(18);
+    color: $white;
+    font-weight: medium;
+    margin-bottom: rem(15);
+    &-link {
+      transition: all linear 0.2s;
+      &:hover {
+        text-decoration: underline;
+        color: lighten($post-title-link, 30%);
+        padding-left: 3px;
+      }
+    }
+    &--mb0 {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    margin-bottom: rem(20);
+  }
+  &__description {
+    color: #d2d2d2;
+  }
+  &__text {
+    color: $white;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: rem(10);
+    a {
+      color: $post-data-link-read;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+      margin-bottom: rem(20);
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1.25em;
+    }
+    h4 {
+      font-size: 1.15em;
+    }
+    h5,
+    h6 {
+      font-size: 1em;
+    }
+    ul,
+    ol {
+      margin-bottom: rem(20);
+    }
+    ol {
+      list-style: decimal;
+      list-style-position: inside;
+    }
+    table {
+      width: 100%;
+      margin-bottom: rem(20);
+
+      tr,
+      td,
+      th {
+        border: 1px solid pink;
+      }
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    p {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__data {
+    display: flex;
+    color: $post-data;
+    line-height: rem(12);
+    &-link {
+      transition: color 0.3s;
+      &:hover {
+        color: lighten($post-data, 25%);
+      }
+    }
+    &-item {
+      &:not(:last-child):after {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #c4c4c4;
+        margin: 0 rem(15);
+        position: relative;
+        top: -2px;
+      }
+    }
+    &-mt-5 {
+      margin-top: rem(5);
+    }
+  }
+  &__read {
+    color: $post-data-link-read;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(15);
+    font-size: rem(12);
+    color: $white;
+    a {
+      transition: all 0.2s;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+    &-icon {
+      margin-left: rem(7);
+    }
+  }
+}

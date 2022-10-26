@@ -1,0 +1,135 @@
+//====================================================================================================
+.header {
+  display: flex;
+  width: calc(100% - $sidebar-width);
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #0d0d0d;
+  z-index: $z-index-header;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.25);
+  &__left {
+    width: 60%;
+  }
+  &__right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.nav {
+  display: flex;
+  &__item {
+    position: relative;
+    &:hover {
+      .nav__link {
+        background-color: $btn-blue;
+      }
+      > .subnav {
+        display: block;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__link {
+    display: block;
+    font-size: rem(11);
+    text-transform: uppercase;
+    color: $white;
+    padding: rem(13) rem(13);
+    line-height: 1.2;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $btn-blue;
+    }
+    &--subnav {
+      position: relative;
+      padding-right: rem(30);
+      &:after {
+        content: "";
+        display: block;
+        border-style: solid;
+        border-width: 6px 5px 0 5px;
+        border-color: $white transparent transparent transparent;
+        position: absolute;
+        top: 50%;
+        right: rem(10);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: rem(165);
+  background-color: $btn-blue;
+  border-radius: 0 0 5px 5px;
+  padding: rem(5) 0;
+  box-shadow: 0 6px 8px rgba($black, 0.2);
+  &__link {
+    font-size: rem(12);
+    display: block;
+    padding: rem(4.5) rem(14);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: darken($btn-blue, 10%);
+    }
+  }
+}
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
