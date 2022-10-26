@@ -28,6 +28,7 @@ $post-data: #828282;
 $post-data-link-read: #107eff;
 $pagination-default-color: #0d0d0d;
 $pagination-active-color: #104be3;
+$related-list-title: #f3eba2;
 // BUTTONS
 $btn-red: #ed3024;
 $btn-blue: #3137c9;
@@ -154,6 +155,7 @@ body {
 @import "post";
 @import "embed";
 @import "pagination";
-
+@import "related.scss";
+@import "comments.scss";
 // Подключение стилей отдельных страниц
 @import "home";

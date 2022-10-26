@@ -3,12 +3,14 @@
 .form {
   width: 100%;
   background-color: $primary;
-  max-width: rem(210);
   &__row {
   }
   &__column {
   }
   &__line {
+  }
+  &__nav-input {
+    max-width: rem(210);
   }
   &__input {
     display: block;

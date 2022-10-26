@@ -19,7 +19,9 @@
     font-size: rem(18);
     color: $white;
     font-weight: medium;
-    margin-bottom: rem(15);
+    margin-top: rem(30);
+    margin-bottom: rem(20);
+
     &-link {
       transition: all linear 0.2s;
       &:hover {

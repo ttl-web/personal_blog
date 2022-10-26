@@ -1,0 +1,57 @@
+.comments {
+  &__title {
+    font-size: rem(16);
+    color: $white;
+    font-weight: 500;
+    margin-bottom: rem(15);
+  }
+}
+.form {
+  &__group {
+    margin-bottom: rem(15);
+    position: relative;
+  }
+  &__control {
+    display: block;
+    width: 100%;
+    height: rem(30);
+    padding: rem(5) 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: inherit;
+    color: $white;
+    border-bottom: 1px solid #3f3f3f;
+
+    &::placeholder {
+      color: rgba($white, 0.2);
+    }
+    &:focus + .form__line {
+      width: 100%;
+    }
+    &--textarea {
+      resize: none;
+      overflow: hidden;
+    }
+  }
+  &__line {
+    width: 0;
+    height: 1px;
+    background-color: $btn-blue;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+}
+
+.btn {
+  &--rounded {
+    border-radius: 0.41em;
+  }
+  &--smalled {
+    padding: 0.71em 1.25em;
+  }
+}
