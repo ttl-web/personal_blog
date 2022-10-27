@@ -95,7 +95,6 @@
       margin-bottom: rem(20);
     }
   }
-
   &__footer {
     display: flex;
     justify-content: space-between;
@@ -140,17 +139,25 @@
     margin-bottom: rem(15);
     font-size: rem(12);
     color: $white;
-    a {
-      transition: all 0.2s;
-      opacity: 0.6;
-      &:hover {
-        opacity: 1;
-        text-decoration: underline;
-        color: $white;
-      }
-    }
     &-icon {
       margin-left: rem(7);
+    }
+  }
+  &__subtitle {
+    font-size: rem(16);
+    color: $white;
+    font-weight: 500;
+    margin-bottom: rem(15);
+    margin-top: rem(30);
+  }
+  &__back-link,
+  &__share-link {
+    transition: all 0.2s;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+      color: $white;
     }
   }
 }

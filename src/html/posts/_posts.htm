@@ -1,7 +1,7 @@
 <article class="post">
   <div class="post__actions">
-    <a href="index.html">вернуться назад</a>
-    <a href="#">
+    <a class="post__back-link" href="index.html">вернуться назад</a>
+    <a class="post__share-link" href="#">
       поделиться<img
         class="post__actions-icon"
         src="img/content/posts/share_icon.svg"
@@ -117,7 +117,7 @@
       <!--/.post__text-->
     </div>
     <div class="related">
-      <h3 class="post__title">Интересно почитать</h3>
+      <h3 class="post__subtitle">Интересно почитать</h3>
 
       <ul class="related__list">
         <li class="related__list-item">
@@ -169,27 +169,114 @@
     </div>
     <!--/.related-->
 
+    <h3 class="post__subtitle">Обсуждение</h3>
+    <form class="form" action="/" method="post">
+      <div class="form__group">
+        <textarea
+          class="form__control form__control--textarea"
+          name="comment-text"
+          placeholder="Текст комментария"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <span class="form__line"></span>
+      </div>
+      <button type="submit" class="btn__blue btn--rounded btn--smalled btn">
+        Отправить
+      </button>
+    </form>
     <!-- .Comments -->
-    <div class="comments">
-      <h3 class="comments__title">Обсуждение</h3>
-      <form class="form" action="/" method="post">
-        <div class="form__group">
-          <textarea
-            class="form__control form__control--textarea"
-            name="comment-text"
-            placeholder="Текст комментария"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <span class="form__line"></span>
+    <ul class="comments">
+      <li class="comments__item">
+        <div class="comments__header">
+          <img
+            class="comments__avatar"
+            src="img/content/posts/commentator_1.png"
+            alt="Avatar"
+          />
+          <div class="comments__author">
+            <div class="comments__name">Дмитрий Иванов</div>
+            <time class="comments__pubdate" datetime="2020-12-21 19:10"
+              >1 неделю назад</time
+            >
+          </div>
         </div>
-        <button type="submit" class="btn__blue btn--rounded btn--smalled btn">
-          Отправить
-        </button>
-      </form>
-    </div>
+        <div class="comments__text">
+          Далеко-далеко за словесными горами в стране гласных и согласных живут
+          рыбные тексты. Коварный эта, свое напоивший языкового безорфографичный
+          рыбными родного ее проектах рекламных текста океана маленький путь
+          продолжил курсивных взгляд она они всеми встретил живет решила имени
+          сих. Путь, там возвращайся собрал букв, агентство использовало от всех
+          по всей, напоивший жаренные алфавит города. Даль если необходимыми
+          речью осталось продолжил запятых залетают языком деревни скатился,
+          свой знаках семь океана домах имени щеке диких она повстречался.
+        </div>
+        <button class="comments__reply" type="button">ответить</button>
+
+        <ul class="comments">
+          <li class="comments__item">
+            <div class="comments__header">
+              <img
+                class="comments__avatar"
+                src="img/content/posts/commentator_2.png"
+                alt="Avatar"
+              />
+              <div class="comments__author">
+                <div class="comments__name">Джонни Браун</div>
+                <time class="comments__pubdate" datetime="2020-12-21 19:10"
+                  >5 дней назад</time
+                >
+              </div>
+            </div>
+            <div class="comments__text">
+              Далеко-далеко за словесными горами в стране гласных и согласных
+              живут рыбные тексты. Несколько, парадигматическая! Первую
+              грамматики наш свою переписывается необходимыми о злых составитель
+              не рукописи, пустился инициал правилами решила lorem города ее.
+            </div>
+            <button class="comments__reply" type="button">ответить</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- /.Comments -->
+
+    <!-- .Comments -->
+    <ul class="comments">
+      <li class="comments__item">
+        <div class="comments__header">
+          <img
+            class="comments__avatar"
+            src="img/content/posts/commentator_3.png"
+            alt="Avatar"
+          />
+          <div class="comments__author">
+            <div class="comments__name">Александр Масалов</div>
+            <time class="comments__pubdate" datetime="2020-12-21 19:10"
+              >10 часов назад</time
+            >
+          </div>
+        </div>
+        <div class="comments__text">
+          Далеко-далеко за словесными горами в стране гласных и согласных живут
+          рыбные тексты. Lorem, щеке. Семантика рот толку океана рыбного вдали
+          осталось ему но! Что рукописи дал не курсивных снова безорфографичный
+          родного себя. Рыбными города на берегу коварных безорфографичный
+          залетают ему, великий парадигматическая букв имеет пунктуация до щеке
+          пустился пояс моей, послушавшись даль языком то, домах составитель
+          заманивший толку коварный? Вершину всемогущая пор пояс первую
+          курсивных текстами. Путь запятой переписали снова своего решила о
+          вопрос осталось вершину пояс продолжил? Осталось даже домах скатился?
+          Города это продолжил вершину встретил меня, снова вскоре о всеми
+          строчка подпоясал всемогущая однажды переписали использовало, жизни
+          букв текстами. Вопрос, пор?
+        </div>
+        <button class="comments__reply" type="button">ответить</button>
+      </li>
+    </ul>
     <!-- /.Comments -->
   </div>
   <!--/.content-->
+  <a class="post__back-link" href="index.html">вернуться назад</a>
 </article>
 <!-- /.POST-->
