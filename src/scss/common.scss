@@ -8,6 +8,11 @@
     padding-left: rem(50);
     padding-right: rem(50);
   }
+  &__title {
+    font-size: rem(21);
+    color: $white;
+    margin-bottom: rem(30);
+  }
 }
 
 // SIDEBAR

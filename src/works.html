@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/_head.htm',{ "title":"Пост" })
+  @@include('html/_head.htm',{ "title":"Работы" })
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{}) @@include('html/_sidebar.htm,{})
       <main class="page">
-        <div class="page__container">@@include('html/_posts.htm',{})</div>
+        <div class="page__container">
+          <a class="post__back-link" href="index.html">вернуться назад</a>
+          <h1 class="page__title">Мои работы</h1>
+        </div>
       </main>
 
       @@include('html/_footer.htm',{})

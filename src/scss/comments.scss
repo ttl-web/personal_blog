@@ -30,12 +30,12 @@
   &__line {
     width: 0;
     height: 1px;
-    background-color: $btn-blue;
+    background: linear-gradient(90deg, $btn-blue, $btn-red);
     bottom: 0;
     left: 0;
     position: absolute;
     z-index: 1;
-    transition: all 0.3s;
+    transition: all 0.5s;
   }
 }
 
