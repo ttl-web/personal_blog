@@ -38,16 +38,6 @@
     transition: all 0.5s;
   }
 }
-
-.btn {
-  &--rounded {
-    border-radius: 0.41em;
-  }
-  &--smalled {
-    padding: 0.71em 1.25em;
-  }
-}
-
 .comments {
   &__item {
     margin-bottom: rem(30);

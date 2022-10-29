@@ -57,6 +57,9 @@
   margin-bottom: rem(30);
   padding: rem(25);
   border-radius: 5px;
+  &__searches {
+    padding-top: 1px;
+  }
 }
 
 // PAGINATION
@@ -73,4 +76,19 @@
 
 .comments {
   margin-top: rem(30);
+}
+
+.work {
+  margin-bottom: rem(30);
+  box-shadow: 0 15px 25px rgba($black, 0.35);
+  background-color: $primary;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(30);
 }

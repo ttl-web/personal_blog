@@ -43,7 +43,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 700;
+$maxWidthContainer: 600;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -157,5 +157,7 @@ body {
 @import "pagination";
 @import "related.scss";
 @import "comments.scss";
+@import "work.scss";
+@import "tags.scss";
 // Подключение стилей отдельных страниц
 @import "home";

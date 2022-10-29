@@ -41,8 +41,14 @@
     padding: rem(13) rem(13);
     line-height: 1.2;
     transition: background-color 0.3s;
+
     &:hover {
       background-color: $btn-blue;
+    }
+    &-logout {
+      &:hover {
+        background-color: darken($btn-red, 25%);
+      }
     }
     &--subnav {
       position: relative;
