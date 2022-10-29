@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Вход" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{}) @@include('html/_sidebar.htm,{})
+      <main class="page page--reset">
+        <div class="page__container page__container--reset">
+          <h1 class="page__title page__title--center">Вход</h1>
+          <form class="form form--auth" action="/" method="POST">
+            <div class="form__group form__group--md">
+              <input
+                class="form__control form__control-bg"
+                type="email"
+                placeholder="Ваш e-mail"
+              />
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__group form__group--md">
+              <input
+                class="form__control form__control-bg"
+                type="password"
+                placeholder="Пароль"
+              />
+              <span class="form__line"></span>
+            </div>
+            <div class="form__footer form__footer--center">
+              <div class="form__group form__group--signup">
+                <button
+                  type="submit"
+                  class="btn__blue btn--rounded btn--smalled btn"
+                >
+                  Войти
+                </button>
+              </div>
+              <ul class="form__footer-list">
+                <li>
+                  <a class="form__footer-link" href="sign_up.html"
+                    >зарегистрироваться</a
+                  >
+                </li>
+                <li>
+                  <a class="form__footer-link" href="reset.html"
+                    >сбросить пароль</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.cabinet {
+  &__form {
+    width: rem(340);
+  }
+  &__avatar {
+    flex-grow: 1;
+    padding-left: rem(110);
+
+    img {
+      display: block;
+      margin-bottom: rem(15);
+    }
+  }
+  &__file {
+    color: $post-data-link-read;
+    text-decoration: underline;
+    cursor: pointer;
+    input {
+      display: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

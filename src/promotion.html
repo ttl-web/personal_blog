@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Пост" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{}) @@include('html/_sidebar.htm,{})
+      <main class="page">
+        <div class="page__container">
+          <article class="post">
+            <a class="post__back-link" href="index.html">вернуться назад</a>
+            <div class="post__header">
+              <h2 class="post__title post__title--mb0">Реклама №1</h2>
+              <ul class="post__data post__data-mt-5">
+                <li class="post__data-item">
+                  <time datetime="2020-06-21 19:20">21.06.2020</time>
+                </li>
+                <li class="post__data-item">
+                  <a class="post__data-link" href="#">реклама</a>
+                </li>
+              </ul>
+            </div>
+            <div class="post__content">
+              <div class="post__text">
+                <h3>Здесь могла бы быть ваша реклама</h3>
+                <p><img src="img/content/posts/content_image.jpg" alt="" /></p>
+                <table>
+                  <tr>
+                    <th>a header cell</th>
+                    <th>a header cell</th>
+                    <th>a header cell</th>
+                    <th>a header cell</th>
+                    <th>a header cell</th>
+                  </tr>
+                  <tr>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                  </tr>
+                  <tr>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                  </tr>
+                  <tr>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                    <td>I'm a cell</td>
+                  </tr>
+                </table>
+                <p>
+                  <span class="fr-video"
+                    ><iframe
+                      src="https://www.youtube.com/embed/T-9cqwIusM4"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe
+                  ></span>
+                </p>
+                <!--/.post__text-->
+              </div>
+            </div>
+            <!--/.content-->
+            <a class="post__back-link" href="index.html">вернуться назад</a>
+          </article>
+          <!-- /.POST-->
+        </div>
+      </main>
+
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

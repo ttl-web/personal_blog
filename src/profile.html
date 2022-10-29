@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Профиль" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{}) @@include('html/_sidebar.htm,{})
+      <main class="page page--reset">
+        <div class="page__container page__container--reset">
+          <h1 class="page__title">Профиль</h1>
+          <div class="cabinet">
+            <div class="cabinet__form">
+              <form action="/" method="POST" class="form">
+                <div class="form__group form__group--md">
+                  <input
+                    class="form__control form__control-bg"
+                    type="text"
+                    placeholder="Ваше имя"
+                    value="Александр Масалов"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="form__group form__group--md">
+                  <input
+                    class="form__control form__control-bg"
+                    type="email"
+                    placeholder="Ваше имя"
+                    value="masalov98@bk.ru"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="form__group form__group--md">
+                  <input
+                    class="form__control form__control-bg"
+                    type="password"
+                    placeholder="Новый пароль"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="form__group form__group--md">
+                  <input
+                    class="form__control form__control-bg"
+                    type="password"
+                    placeholder="Подтвердите пароль"
+                  />
+                  <span class="form__line"></span>
+                </div>
+              </form>
+            </div>
+
+            <div class="cabinet__avatar">
+              <img src="img/cabinet/cabinet.jpg" alt="cabinet_photo" />
+              <label class="cabinet__file" for=""
+                ><input type="file" />выбрать аватар</label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="btn__blue btn--rounded btn--smalled btn"
+            >
+              Сохранить
+            </button>
+          </div>
+        </div>
+      </main>
+
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
