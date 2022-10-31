@@ -1,8 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
 // MAIN
 .page {
-  padding-left: $sidebar-width;
   padding: rem(100) 0 rem(50);
+  padding-left: $sidebar-width;
   &--reset {
     padding: 0;
   }
@@ -15,6 +15,7 @@
     overflow: hidden;
     &--reset {
       padding: 0;
+      padding-left: $sidebar-width;
     }
   }
   &__title {
@@ -50,7 +51,7 @@
   display: grid;
   grid-column-gap: 15px;
   grid-template-rows: 195px;
-  grid-template-columns: repeat(auto-fill, 138px);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
   margin-bottom: rem(30);
 }

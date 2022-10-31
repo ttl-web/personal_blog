@@ -2,6 +2,7 @@
 // Снипет (HTML):
 .form {
   width: 100%;
+
   &__group {
     position: relative;
     margin-bottom: rem(15);
@@ -27,6 +28,9 @@
     &::placeholder {
       color: rgba($white, 0.2);
     }
+    &:focus + .form__line-feedback {
+      width: 100%;
+    }
     &:focus + .form__line {
       width: 100%;
     }
@@ -44,6 +48,16 @@
     position: absolute;
     z-index: 1;
     transition: all 0.5s;
+    &-feedback {
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, pink, purple);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      z-index: 1;
+      transition: all 0.3s ease-in-out;
+    }
   }
   &__row {
   }

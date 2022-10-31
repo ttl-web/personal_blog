@@ -21,7 +21,6 @@
     font-weight: medium;
     margin-top: rem(30);
     margin-bottom: rem(20);
-
     &-link {
       transition: all linear 0.2s;
       &:hover {
@@ -152,6 +151,7 @@
   }
   &__back-link,
   &__share-link {
+    font-size: rem(12);
     transition: all 0.2s;
     opacity: 0.6;
     &:hover {

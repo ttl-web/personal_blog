@@ -1,11 +1,54 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
+<div class="popup">
+  <div class="popup__content popup__content--contact">
+    <h1 class="page__title page__title--center popup-title">Обратная связь</h1>
+    <button class="popup__cancel" type="button">
+      <img src="img/cancel.svg" alt="" />
+    </button>
+    <form class="form" action="/" method="POST">
+      <div class="form__group form__group--md">
+        <input
+          class="form__control form__control-bg"
+          type="text"
+          placeholder="Ваше имя"
+        />
+        <span class="form__line-feedback"></span>
+      </div>
+      <div class="form__group form__group--md">
+        <input
+          class="form__control form__control-bg"
+          type="email"
+          placeholder="Ваш e-mail"
+        />
+        <span class="form__line-feedback"></span>
+      </div>
+      <div class="form__group form__group--md">
+        <textarea
+          class="form__control form__control--textarea"
+          name="comment-text"
+          placeholder="Текст cообщение"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <span class="form__line-feedback"></span>
+      </div>
+      <div class="form__footer">
+        <button type="submit" class="btn__blue btn--rounded btn--smalled btn">
+          Отправить
+        </button>
+      </div>
+    </form>
+
+    <ul class="popup-footer">
+      <li>
+        e-mail
+        <a href="mailto:masalov98@bk.ru">masalov98@bk.ru</a>
+      </li>
+      <li>
+        тел:
+        <a href="tel:+79284667591">+79284667591</a>
+      </li>
+    </ul>
+  </div>
+  <!--./popup__content-->
 </div>
- -->
+<!--./popup-->
