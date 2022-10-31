@@ -3,6 +3,9 @@
 .page {
   padding: rem(100) 0 rem(50);
   padding-left: $sidebar-width;
+  @include breakpoint($tablet) {
+    padding-left: 0;
+  }
   &--reset {
     padding: 0;
   }
@@ -52,7 +55,6 @@
   grid-column-gap: 15px;
   grid-template-rows: 195px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
   margin-bottom: rem(30);
 }
 // ADD A POST

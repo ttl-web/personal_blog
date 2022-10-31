@@ -21,6 +21,9 @@
     height: 100%;
     object-fit: cover;
   }
+  @include breakpoint($tablet) {
+    display: none;
+  }
 }
 
 .profile {
