@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221028191229">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221031234424">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,6 @@
 							</ul>
 						</li>
 						<li><a class="nav__link" href="#">Обо мне</a></li>
-						<li><a class="nav__link" href="#">Реклама</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -42,11 +41,15 @@
 			<div class="header__right">
 				<nav class="nav">
 					<ul class="nav__list">
-						<li><a class="nav__link" href="#">Профиль</a></li>
+						<li><a class="nav__link" href="profile.html">Профиль</a></li>
+						<li><a class="nav__link" href="signin.html">Войти</a></li>
+						<li>
+							<a class="nav__link nav__link-logout" href="index.html">Выйти</a>
+						</li>
 					</ul>
 				</nav>
-				<form class="form form__nav-input" action="/" method="POST">
-					<input type="text" class="form__input" placeholder="Поиск по блогу" />
+				<form class="form form__nav-input" action="search.html" method="get">
+					<input type="text" class="form__input form__input-search" placeholder="Поиск по блогу" />
 				</form>
 			</div>
 		</header>
@@ -82,7 +85,7 @@
 			</div>
 			<!-- END OF SIDEBAR CONTENT -->
 			<div class="sidebar__footer">
-				<a class="btn btn__red" href="#">Мои работы</a>
+				<a class="btn btn__red" href="works.html">Мои работы</a>
 				<button type="submit" class="btn__blue btn" onclick="window.location.href = 'https://vk.com/im?sel=205864801';">
 					Написать мне
 				</button>
@@ -329,18 +332,48 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
+	<div class="popup">
+		<div class="popup__content popup__content--contact">
+			<h1 class="page__title page__title--center popup-title">Обратная связь</h1>
+			<button class="popup__cancel" type="button">
+				<img src="img/cancel.svg" alt="" />
+			</button>
+			<form class="form" action="/" method="POST">
+				<div class="form__group form__group--md">
+					<input class="form__control form__control-bg" type="text" placeholder="Ваше имя" />
+					<span class="form__line-feedback"></span>
+				</div>
+				<div class="form__group form__group--md">
+					<input class="form__control form__control-bg" type="email" placeholder="Ваш e-mail" />
+					<span class="form__line-feedback"></span>
+				</div>
+				<div class="form__group form__group--md">
+					<textarea class="form__control form__control--textarea" name="comment-text" placeholder="Текст cообщение" cols="30" rows="10"></textarea>
+					<span class="form__line-feedback"></span>
+				</div>
+				<div class="form__footer">
+					<button type="submit" class="btn__blue btn--rounded btn--smalled btn">
+						Отправить
+					</button>
+				</div>
+			</form>
+
+			<ul class="popup-footer">
+				<li>
+					e-mail
+					<a href="mailto:masalov98@bk.ru">masalov98@bk.ru</a>
+				</li>
+				<li>
+					тел:
+					<a href="tel:+79284667591">+79284667591</a>
+				</li>
+			</ul>
 		</div>
+		<!--./popup__content-->
 	</div>
-</div>
- -->
-	<script src="js/app.min.js?_v=20221028191229"></script>
+	<!--./popup-->
+	<script src="js/app.min.js?_v=20221031234424"></script>
+
 </body>
 
 </html>

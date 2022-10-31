@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Работы</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221031234424">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__left">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="nav__link" href="index.html">Главная</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link nav__link--subnav" href="#">Статьи</a>
+							<ul class="subnav">
+								<li><a class="subnav__link" href="#">Создание сайтов</a></li>
+								<li class="nav__item">
+									<a class="subnav__link" href="#">Интернет-маркетинг</a>
+								</li>
+								<li class="nav__item">
+									<a class="subnav__link" href="#">Продвижение видео</a>
+								</li>
+							</ul>
+						</li>
+						<li><a class="nav__link" href="#">Обо мне</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="header__right">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li><a class="nav__link" href="profile.html">Профиль</a></li>
+						<li><a class="nav__link" href="signin.html">Войти</a></li>
+						<li>
+							<a class="nav__link nav__link-logout" href="index.html">Выйти</a>
+						</li>
+					</ul>
+				</nav>
+				<form class="form form__nav-input" action="search.html" method="get">
+					<input type="text" class="form__input form__input-search" placeholder="Поиск по блогу" />
+				</form>
+			</div>
+		</header>
+		<aside class="sidebar">
+			<div class="sidebar__header">
+				<picture><source srcset="img/sidebar/sidebar-header.webp" type="image/webp"><img class="sidebar__img-top" src="img/sidebar/sidebar-header.jpg" alt="sidebar image" /></picture>
+			</div>
+
+			<div class="sidebar__content">
+				<div class="profile">
+					<picture><source srcset="img/sidebar/avatar.webp" type="image/webp"><img class="profile__avatar" src="img/sidebar/avatar.png" alt="YOUR AVATAR" /></picture>
+					<div class="profile__name">Александр Масалов</div>
+					<div class="profile__profession">блог front-end разработчика</div>
+					<ul class="social">
+						<li class="social__item">
+							<a href="#" class="social__link" target="_blank"><img src="img/sidebar/instagram.svg" alt="Александр Масалов instagram" /></a>
+						</li>
+						<li class="social__item">
+							<a href="https://vk.com/needau" class="social__link" target="_blank"><img src="img/sidebar/vk.svg" alt="Александр Масалов VK" /></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link" target="_blank"><img src="img/sidebar/pinterest.svg" alt="Александр Масалов Pinterest" /></a>
+						</li>
+					</ul>
+					<div class="profile__text">
+						<p>
+							Front-end разработчик. Практик верстки сайтов. Созданием сайтов
+							занимаюсь с 2019 года. Работал в нескольких ИТ компаниях и наработал
+							более 2500 часов в создании сайтов различной сложности.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- END OF SIDEBAR CONTENT -->
+			<div class="sidebar__footer">
+				<a class="btn btn__red" href="works.html">Мои работы</a>
+				<button type="submit" class="btn__blue btn" onclick="window.location.href = 'https://vk.com/im?sel=205864801';">
+					Написать мне
+				</button>
+			</div>
+		</aside>
+
+		<main class="page">
+			<div class="page__container">
+				<a class="post__back-link" href="index.html">вернуться назад</a>
+				<h1 class="page__title">Мои работы</h1>
+				<article class="work">
+					<div class="work__preview">
+						<picture><source srcset="img/content/my_works/altermono.webp" type="image/webp"><img src="img/content/my_works/altermono.jpg" alt="altermono_img" /></picture>
+					</div>
+					<div class="work__content">
+						<h2 class="work__title"><a href="#" target="_blank">altermono.com</a></h2>
+						<div class="work__description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
+								volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit.
+								Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu
+								sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa.
+								Egestas ornare vel volutpat.
+							</p>
+						</div>
+						<ul class="tags">
+							<li class="tags__item">дизайн</li>
+							<li class="tags__item">создание сайта</li>
+							<li class="tags__item">SMM</li>
+						</ul>
+						<div class="work__footer">
+							<a class="btn__blue btn--rounded btn--smalled btn" href="#" target="_blank">Перейти на сайт</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="work">
+					<div class="work__preview">
+						<picture><source srcset="img/content/my_works/codedoco.webp" type="image/webp"><img src="img/content/my_works/codedoco.jpg" alt="codedoco_img" /></picture>
+					</div>
+					<div class="work__content">
+						<h2 class="work__title"><a href="#" target="_blank">altermono.com</a></h2>
+						<div class="work__description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
+								volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit.
+								Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu
+								sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa.
+								Egestas ornare vel volutpat.
+							</p>
+						</div>
+						<ul class="tags">
+							<li class="tags__item">дизайн</li>
+							<li class="tags__item">создание сайта</li>
+							<li class="tags__item">SMM</li>
+						</ul>
+						<div class="work__footer">
+							<a class="btn__blue btn--rounded btn--smalled btn" href="#" target="_blank">Перейти на сайт</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="work">
+					<div class="work__preview">
+						<picture><source srcset="img/content/my_works/altermono.webp" type="image/webp"><img src="img/content/my_works/altermono.jpg" alt="altermono_img" /></picture>
+					</div>
+					<div class="work__content">
+						<h2 class="work__title"><a href="#" target="_blank">altermono.com</a></h2>
+						<div class="work__description">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate,
+								nostrum sed deserunt excepturi incidunt praesentium, labore repellat
+								totam esse velit suscipit doloremque rem quibusdam, nulla atque. Vero
+								sed delectus voluptate expedita cumque eos nemo a laudantium assumenda
+								minus illo, ipsa unde non tenetur harum pariatur debitis facere
+								reiciendis voluptatem laboriosam?
+							</p>
+						</div>
+						<ul class="tags">
+							<li class="tags__item">дизайн</li>
+							<li class="tags__item">создание сайта</li>
+							<li class="tags__item">SMM</li>
+							<li class="tags__item">создание сайта</li>
+							<li class="tags__item">SMM</li>
+							<li class="tags__item">создание сайта</li>
+							<li class="tags__item">SMM</li>
+						</ul>
+						<div class="work__footer">
+							<a class="btn__blue btn--rounded btn--smalled btn" href="#" target="_blank">Перейти на сайт</a>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<div class="popup">
+		<div class="popup__content popup__content--contact">
+			<h1 class="page__title page__title--center popup-title">Обратная связь</h1>
+			<button class="popup__cancel" type="button">
+				<img src="img/cancel.svg" alt="" />
+			</button>
+			<form class="form" action="/" method="POST">
+				<div class="form__group form__group--md">
+					<input class="form__control form__control-bg" type="text" placeholder="Ваше имя" />
+					<span class="form__line-feedback"></span>
+				</div>
+				<div class="form__group form__group--md">
+					<input class="form__control form__control-bg" type="email" placeholder="Ваш e-mail" />
+					<span class="form__line-feedback"></span>
+				</div>
+				<div class="form__group form__group--md">
+					<textarea class="form__control form__control--textarea" name="comment-text" placeholder="Текст cообщение" cols="30" rows="10"></textarea>
+					<span class="form__line-feedback"></span>
+				</div>
+				<div class="form__footer">
+					<button type="submit" class="btn__blue btn--rounded btn--smalled btn">
+						Отправить
+					</button>
+				</div>
+			</form>
+
+			<ul class="popup-footer">
+				<li>
+					e-mail
+					<a href="mailto:masalov98@bk.ru">masalov98@bk.ru</a>
+				</li>
+				<li>
+					тел:
+					<a href="tel:+79284667591">+79284667591</a>
+				</li>
+			</ul>
+		</div>
+		<!--./popup__content-->
+	</div>
+	<!--./popup-->
+	<script src="js/app.min.js?_v=20221031234424"></script>
+
+</body>
+
+</html>
