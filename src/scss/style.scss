@@ -58,7 +58,7 @@ $pc: em(
   $containerWidth
 ); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: em(620.98); // Телефоны L
+$mobile: em(650.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
 
 // Тип адаптива:
@@ -119,7 +119,7 @@ body {
   // По брейк-поинтам
   [class*="__container"] {
     margin: 0 auto;
-
+    padding: 0 rem(50);
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
       box-sizing: content-box;
@@ -136,6 +136,7 @@ body {
     }
     @media (max-width: $mobile) {
       max-width: none;
+      padding: 0 rem(15);
       @if ($containerPadding>0 and $maxWidthContainer>0) {
         padding: 0 rem(math.div($containerPadding, 2));
       }
@@ -163,5 +164,6 @@ body {
 @import "work.scss";
 @import "tags.scss";
 @import "cabinet.scss";
+@import "base/burger.scss";
 // Подключение стилей отдельных страниц
 @import "home";
