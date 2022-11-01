@@ -69,7 +69,8 @@ $responsiveType: 2;
 @import "base/null";
 body {
   // Скролл заблокирован
-  &.no-scroll {
+  &.no-scroll,
+  &.show-sidebar {
     overflow: hidden;
     touch-action: none;
   }

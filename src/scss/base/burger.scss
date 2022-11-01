@@ -1,0 +1,51 @@
+.burger {
+  display: none;
+  width: rem(30);
+  height: rem(20);
+  position: absolute;
+  top: 50%;
+  left: rem(15);
+  transform: translateY(-50%);
+  font-size: 0;
+  span,
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+    position: absolute;
+    transition: all 0.3s linear;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+  }
+
+  &.show-sidebar {
+    span {
+      opacity: 0;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &::before,
+    &::after {
+      top: 50%;
+    }
+  }
+  @include breakpoint($tablet) {
+    display: block;
+  }
+}

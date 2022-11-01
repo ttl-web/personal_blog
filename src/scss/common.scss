@@ -6,11 +6,27 @@
   @include breakpoint($tablet) {
     padding-left: 0;
   }
+  @include breakpoint($tablet) {
+    .show-sidebar & {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+    }
+  }
   &--reset {
     padding: 0;
   }
   &__container {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,8 +58,14 @@
   left: 0;
   z-index: $z-index-sidebar;
   @include breakpoint($tablet) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - rem(40));
+    top: rem(40);
     transform: translateX(-100%);
-    transition: transform .2s linear;
+    transition: transform 0.2s linear;
+    padding-bottom: rem(15);
+    overflow: auto;
     .show-sidebar & {
       transform: translateX(0);
     }
@@ -54,6 +76,9 @@
 .social {
   display: flex;
   justify-content: center;
+  @include breakpoint($tablet) {
+    display: none;
+  }
 }
 
 // STORIES
@@ -118,51 +143,4 @@
 .cabinet {
   display: flex;
   flex-wrap: wrap;
-}
-.burger {
-  width: rem(30);
-  height: rem(20);
-  position: absolute;
-  top: 50%;
-  left: rem(15);
-  transform: translateY(-50%);
-  font-size: 0;
-  span,
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: $white;
-    position: absolute;
-    transition: all .3s linear;
-  }
-  &::before {
-    top: 0;
-  }
-  &::after {
-    bottom: 0;
-  }
-  span {
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all .2s;
-  }
-
-  &.show-sidebar {
-    span {
-      opacity: 0;
-    }
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: rotate(-45deg);
-    }
-    &::before,
-    &::after {
-      top: 50%;
-  }
-  }
 }
