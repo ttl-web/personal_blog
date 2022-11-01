@@ -8,6 +8,9 @@
     }
     &--preview {
       margin: rem(-25) rem(-25) rem(25);
+      @include breakpoint($mobile) {
+        margin: rem(-15) rem(-15) rem(15);
+      }
     }
   }
   &__preview {
@@ -98,11 +101,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint($mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__data {
     display: flex;
     color: $post-data;
     line-height: rem(12);
+    @include breakpoint($mobile) {
+      margin-bottom: rem(10);
+      font-size: rem(12);
+    }
     &-link {
       transition: color 0.3s;
       &:hover {

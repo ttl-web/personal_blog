@@ -74,12 +74,15 @@
     background: transparent;
     font-size: rem(12);
     color: $white;
-
     &-search {
       background: $primary;
     }
     &::placeholder {
       color: rgba($white, 0.4);
+    }
+    @include breakpoint($tablet) {
+      height: rem(40);
+      font-size: rem(16);
     }
   }
   &__button {

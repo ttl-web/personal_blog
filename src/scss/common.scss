@@ -5,11 +5,9 @@
   padding-left: $sidebar-width;
   @include breakpoint($tablet) {
     padding-left: 0;
-  }
-  @include breakpoint($tablet) {
+    padding-top: rem(70);
     .show-sidebar & {
       position: relative;
-
       &::after {
         content: "";
         display: block;
@@ -22,6 +20,9 @@
         z-index: 100;
       }
     }
+  }
+  @include breakpoint($mobile) {
+    padding-bottom: rem(40);
   }
   &--reset {
     padding: 0;
@@ -88,6 +89,14 @@
   grid-template-rows: 195px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: rem(30);
+  @include breakpoint($mobile) {
+    grid-template-columns: 140px 140px 140px 140px;
+    overflow: auto;
+    margin-bottom: rem(20);
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 }
 // ADD A POST
 .add-post {
@@ -96,6 +105,9 @@
   background-color: $secondary;
   border-radius: 5px;
   padding: rem(15) rem(20);
+  @include breakpoint($mobile) {
+    padding: rem(15);
+  }
 }
 // POST
 .post {
@@ -104,6 +116,9 @@
   margin-bottom: rem(30);
   padding: rem(25);
   border-radius: 5px;
+  @include breakpoint($mobile) {
+    padding: rem(15);
+  }
   &__searches {
     padding-top: 1px;
   }
@@ -114,6 +129,9 @@
   display: flex;
   justify-content: center;
   margin-top: rem(20);
+  @include breakpoint($mobile) {
+    margin-top: 0;
+  }
 }
 // related
 .related {

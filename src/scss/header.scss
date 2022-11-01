@@ -31,7 +31,7 @@
   display: flex;
 
   &--mobile {
-    display: none;
+    display: block;
     margin: rem(20) 0;
   }
   @include breakpoint($tablet) {
