@@ -2,12 +2,22 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    @include breakpoint($mobile) {
+      flex-direction: column;
+    }
   }
   &__list-item {
     margin-bottom: rem(25);
     width: 50%;
     &:nth-child(even) {
       padding-left: 40px;
+      @include breakpoint($mobile) {
+        padding-left: 0;
+      }
+    }
+    @include breakpoint($mobile) {
+      width: 100%;
+      padding-left: 0;
     }
   }
   &__list-title {

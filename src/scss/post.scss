@@ -24,6 +24,9 @@
     font-weight: medium;
     margin-top: rem(30);
     margin-bottom: rem(20);
+    @include breakpoint($mobile) {
+      line-height: 1.4;
+    }
     &-link {
       transition: all linear 0.2s;
       &:hover {
@@ -32,8 +35,8 @@
         padding-left: 3px;
       }
     }
-    &--mb0 {
-      margin-bottom: 0;
+    &--open {
+      margin-bottom: rem(10);
     }
   }
   &__content {

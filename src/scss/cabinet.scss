@@ -5,7 +5,11 @@
   &__avatar {
     flex-grow: 1;
     padding-left: rem(110);
-
+    @include breakpoint($mobile) {
+      padding: 0;
+      order: -1;
+      margin-bottom: rem(15);
+    }
     img {
       display: block;
       margin-bottom: rem(15);

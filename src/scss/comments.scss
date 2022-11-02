@@ -6,6 +6,9 @@
     > .comments {
       padding-left: rem(30);
       margin-top: rem(30);
+      @include breakpoint($mobile) {
+        padding-left: rem(15);
+      }
     }
   }
   &__header {
