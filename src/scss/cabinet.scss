@@ -1,6 +1,9 @@
 .cabinet {
   &__form {
     width: rem(340);
+    @include breakpoint($mobileSmall) {
+      width: rem(300);
+    }
   }
   &__avatar {
     flex-grow: 1;
