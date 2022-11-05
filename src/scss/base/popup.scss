@@ -13,7 +13,9 @@
   padding: rem(10);
   background: rgba(0, 0, 0, 0.8);
   z-index: $z-index-popup;
-
+  &.show {
+    display: flex;
+  }
   &__content {
     position: relative;
     width: 100%;
@@ -22,12 +24,25 @@
     background: $primary;
     border-radius: 5px;
     box-shadow: 0 0 100px darken(purple, 17%);
-    transition: box-shadow 0.3s;
+    transform: scale(2);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
     &--contact {
       padding-bottom: rem(25);
     }
     &:hover {
       box-shadow: 0 0 100px darken(purple, 13%);
+    }
+
+    &--story {
+      padding: 0;
+      background: none;
+      &.popup__content {
+        box-shadow: none;
+        &:hover {
+          box-shadow: none;
+        }
+      }
     }
   }
   &-footer {
@@ -56,6 +71,13 @@
     &:hover {
       transform: rotate(90deg);
       opacity: 1;
+    }
+  }
+  &__video {
+    display: block;
+    margin: 0 auto;
+    @include breakpoint($mobileSmall) {
+      width: 90%;
     }
   }
 }
