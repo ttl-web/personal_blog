@@ -3,13 +3,14 @@
 
 <head>
 	<title>Личный Блог</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221031234424">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221113193215" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -36,6 +37,9 @@
 						<li><a class="nav__link" href="#">Обо мне</a></li>
 					</ul>
 				</nav>
+				<button class="burger" type="button" id="sidebarToggle">
+					<span>Открыть навигацию</span>
+				</button>
 			</div>
 
 			<div class="header__right">
@@ -53,7 +57,7 @@
 				</form>
 			</div>
 		</header>
-		<aside class="sidebar">
+		<aside class="sidebar" id="sidebar">
 			<div class="sidebar__header">
 				<picture><source srcset="img/sidebar/sidebar-header.webp" type="image/webp"><img class="sidebar__img-top" src="img/sidebar/sidebar-header.jpg" alt="sidebar image" /></picture>
 			</div>
@@ -61,8 +65,11 @@
 			<div class="sidebar__content">
 				<div class="profile">
 					<picture><source srcset="img/sidebar/avatar.webp" type="image/webp"><img class="profile__avatar" src="img/sidebar/avatar.png" alt="YOUR AVATAR" /></picture>
-					<div class="profile__name">Александр Масалов</div>
-					<div class="profile__profession">блог front-end разработчика</div>
+					<div class="profile__header">
+						<div class="profile__name">Александр Масалов</div>
+						<div class="profile__profession">блог front-end разработчика</div>
+					</div>
+
 					<ul class="social">
 						<li class="social__item">
 							<a href="#" class="social__link" target="_blank"><img src="img/sidebar/instagram.svg" alt="Александр Масалов instagram" /></a>
@@ -77,49 +84,74 @@
 					<div class="profile__text">
 						<p>
 							Front-end разработчик. Практик верстки сайтов. Созданием сайтов
-							занимаюсь с 2019 года. Работал в нескольких ИТ компаниях и наработал
+							занимаюсь с 2019 года. Работал в нескольких IT компаниях и наработал
 							более 2500 часов в создании сайтов различной сложности.
 						</p>
 					</div>
+
+					<nav class="nav nav--mobile">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a class="nav__link" href="index.html">Главная</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link nav__link--subnav" href="#">Статьи</a>
+								<ul class="subnav">
+									<li><a class="subnav__link" href="#">Создание сайтов</a></li>
+									<li class="nav__item">
+										<a class="subnav__link" href="#">Интернет-маркетинг</a>
+									</li>
+									<li class="nav__item">
+										<a class="subnav__link" href="#">Продвижение видео</a>
+									</li>
+								</ul>
+							</li>
+							<li><a class="nav__link" href="#">Обо мне</a></li>
+							<li><a class="nav__link" href="profile.html">Профиль</a></li>
+							<li><a class="nav__link" href="index.html">Выйти</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 			<!-- END OF SIDEBAR CONTENT -->
 			<div class="sidebar__footer">
 				<a class="btn btn__red" href="works.html">Мои работы</a>
-				<button type="submit" class="btn__blue btn" onclick="window.location.href = 'https://vk.com/im?sel=205864801';">
+				<button type="submit" class="btn__blue btn" data-modal="contact-modal">
 					Написать мне
 				</button>
 			</div>
 		</aside>
 
-		<main class="page">
+		<main class="page" id="page">
 			<div class="page__container">
 				<div class="stories">
-					<div class="stories__item">
-						<picture><source srcset="img/stories/rest_at_nature.webp" type="image/webp"><img class="stories__preview" src="img/stories/rest_at_nature.jpg" alt="" /></picture>
-						<div class="stories__title">Отдыхаю на природе</div>
-						<time class="stories__date" datetime="2020-09-21">21.09.2020</time>
-					</div>
-					<div class="stories__item">
-						<picture><source srcset="img/stories/hard_project.webp" type="image/webp"><img class="stories__preview" src="img/stories/hard_project.jpg" alt="Заканчиваю сложные проект" /></picture>
-						<div class="stories__title">Заканчиваю сложные проект</div>
-						<time class="stories__date" datetime="2020-09-15">15.09.2020</time>
-					</div>
-					<div class="stories__item">
-						<picture><source srcset="img/stories/move_to_a_new_apartment.webp" type="image/webp"><img class="stories__preview" src="img/stories/move_to_a_new_apartment.jpg" alt="Переехал в новую квартиру" /></picture>
-						<div class="stories__title">Переехал в новую квартиру</div>
-						<time class="stories__date" datetime="2020-09-11">11.09.2020</time>
-					</div>
-					<div class="stories__item">
-						<picture><source srcset="img/stories/autumn_has_come.webp" type="image/webp"><img class="stories__preview" src="img/stories/autumn_has_come.jpg" alt="Осень пришла!" /></picture>
-						<div class="stories__title">Осень пришла!</div>
-						<time class="stories__date" datetime="2020-08-28">28.08.2020</time>
+					<div class="stories__item" data-modal="story-modal4">
+						<picture><source srcset="img/stories/on_a_bridge.webp" type="image/webp"><img class="stories__preview" src="img/stories/on_a_bridge.jpg" alt="Вечером на мосту" /></picture>
+						<div class="stories__title">Вечером на мосту</div>
+						<time class="stories__date" datetime="2020-08-28">02.07.2022</time>
 					</div>
 
+					<div class="stories__item" data-modal="story-modal3">
+						<picture><source srcset="img/stories/exam.webp" type="image/webp"><img class="stories__preview" src="img/stories/exam.jpg" alt="Сидим на экзамене" /></picture>
+						<div class="stories__title">Сдаём экзамен</div>
+						<time class="stories__date" datetime="2020-09-11">16.06.2022</time>
+					</div>
+
+					<div class="stories__item" data-modal="story-modal2">
+						<picture><source srcset="img/stories/electric_scooter.webp" type="image/webp"><img class="stories__preview" src="img/stories/electric_scooter.jpg" alt="Заканчиваю сложные проект" /></picture>
+						<div class="stories__title">Катаемся на электросамокатах</div>
+						<time class="stories__date" datetime="2020-09-15">08.06.2022</time>
+					</div>
+
+					<div class="stories__item" data-modal="story-modal">
+						<picture><source srcset="img/stories/in_the_park.webp" type="image/webp"><img class="stories__preview" src="img/stories/in_the_park.jpg" alt="" /></picture>
+						<div class="stories__title">Отдыхаю в парке</div>
+						<time class="stories__date" datetime="2020-09-21">21.05.2022</time>
+					</div>
 				</div>
 				<div class="add-post">
 					<form class="add-post__form" action="#" method="POST">
-						<textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь"></textarea>
+						<textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь" data-autoresize></textarea>
 						<div class="add-post__form-actions">
 							<label class="add-post__file" for="add-post-file"><input type="file" id="add-post-file" /></label>
 							<button type="submit" class="add-post__send">
@@ -132,11 +164,13 @@
 				<div class="post">
 					<div class="post__content">
 						<p class="post__description">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, voluptatum
-							error repellat impedit architecto rem vero pariatur, dolor atque iure eius
-							tempora voluptatem cum sed debitis at nihil! Voluptates, pariatur?
+							Далеко-далеко за словесными горами в стране гласных и согласных живут
+							рыбные тексты. Lorem взгляд запятых свое щеке послушавшись сих
+							единственное диких знаках от всех, все парадигматическая обеспечивает
+							переулка сбить рекламных всемогущая, вдали безопасную.
 						</p>
 					</div>
+
 					<div class="post__footer">
 						<ul class="post__data">
 							<li>
@@ -248,23 +282,23 @@
 			</div>
 		</footer>
 	</div>
-	<div class="popup">
+	<div class="popup" id="contact-modal">
 		<div class="popup__content popup__content--contact">
 			<h1 class="page__title page__title--center popup-title">Обратная связь</h1>
 			<button class="popup__cancel" type="button">
 				<img src="img/cancel.svg" alt="" />
 			</button>
-			<form class="form" action="/" method="POST">
+			<form class="form" id="form" action="../componetns/sendmail/sendmail.php" method="POST">
 				<div class="form__group form__group--md">
-					<input class="form__control form__control-bg" type="text" placeholder="Ваше имя" />
+					<input id="formName" name="name" class="form__control form__control-bg _req" type="text" placeholder="Ваше имя" />
 					<span class="form__line-feedback"></span>
 				</div>
 				<div class="form__group form__group--md">
-					<input class="form__control form__control-bg" type="email" placeholder="Ваш e-mail" />
+					<input name="email" id="formEmail" class="form__control form__control-bg _req _email" type="email" placeholder="Ваш e-mail" />
 					<span class="form__line-feedback"></span>
 				</div>
 				<div class="form__group form__group--md">
-					<textarea class="form__control form__control--textarea" name="comment-text" placeholder="Текст cообщение" cols="30" rows="10"></textarea>
+					<textarea class="form__control form__control--textarea _req" name="comment_text" placeholder="Текст cообщения" cols="30" rows="10" data-autoresize></textarea>
 					<span class="form__line-feedback"></span>
 				</div>
 				<div class="form__footer">
@@ -288,38 +322,47 @@
 		<!--./popup__content-->
 	</div>
 	<!--./popup-->
-	<div class="popup">
-		<div class="popup__content">
-			<button class="popup__cancel" type="button">
-				<img src="img/cancel.svg" alt="" />
-			</button>
-
-			<ul class="social">
-				<li class="social__item">
-					<a href="#" class="social__link"><img src="img/social-icons/facebook.svg" /></a>
-				</li>
-
-				<li class="social__item">
-					<a href="#" class="social__link"><img src="img/social-icons/twitter.svg" /></a>
-				</li>
-
-				<li class="social__item">
-					<a href="#" class="social__link"><img src="img/social-icons/vk.svg" /></a>
-				</li>
-
-				<li class="social__item">
-					<a href="#" class="social__link"><img src="img/social-icons/copy.svg" /></a>
-				</li>
-			</ul>
+	<div class="popup" id="story-modal">
+		<div class="popup__content popup__content--story">
+			<video class="popup__video" width="427px" height="850px" controls muted autoplay preload="auto">
+				<source src="img/stories/videos/in_the_park.webm" type="video/webm" />
+				<source src="img/stories/videos/in_the_park.mp4" type="video/mp4" />
+				Your browser does not support the video element.
+			</video>
 		</div>
-		<!--./popup__content-->
 	</div>
-	<!--./popup-->
 
-	<div class="popup">
-		<video class="popup__video" src="" poster="https://via.placeholder.com/420x580"></video>
+	<div class="popup" id="story-modal2">
+		<div class="popup__content popup__content--story">
+			<video class="popup__video" width="427px" height="850px" controls muted autoplay preload="auto">
+				<source src="img/stories/videos/electric_scooter.webm" type="video/webm" />
+				<source src="img/stories/videos/electric_scooter.mp4" type="video/mp4" />
+				Your browser does not support the video element.
+			</video>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221031234424"></script>
+
+	<div class="popup" id="story-modal3">
+		<div class="popup__content popup__content--story">
+			<video class="popup__video" width="427px" height="850px" controls muted autoplay preload="auto">
+				<source src="img/stories/videos/exam.webm" type="video/webm" />
+				<source src="img/stories/videos/exam.mp4" type="video/mp4" />
+				Your browser does not support the video element.
+			</video>
+		</div>
+	</div>
+
+	<div class="popup" id="story-modal4">
+		<div class="popup__content popup__content--story">
+			<video class="popup__video" width="427px" height="850px" controls muted autoplay preload="auto">
+				<source src="img/stories/videos/on_a_bridge.webm" type="video/webm" />
+				<source src="img/stories/videos/on_a_bridge.mp4" type="video/mp4" />
+				Your browser does not support the video element.
+			</video>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20221113193215"></script>
 
 </body>
 
